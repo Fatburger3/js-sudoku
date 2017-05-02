@@ -140,7 +140,7 @@ function displayPuzzle($puzzle)
 // Display the puzzle on the form
 function displayPuzzleForm($puzzle)
 {
-    echo '<form class="puzzle_form" action="index.php" method="post">';
+    //echo '<form class="puzzle_form">';
     echo '<table align="center" class="puzzle">';
     $i = 0;
     for($yb = 0; $yb < 3; $yb++)
@@ -157,14 +157,12 @@ function displayPuzzleForm($puzzle)
                     $i = indexOfBlock($xb, $yb, $x, $y);
                     $v = $puzzle[$i];
                     echo '<td class="puzzle_cell">';
-                    echo '<input class="puzzle_input_cell" type="text" size="1" name="';
-                    echo $i;
+                    echo '<input class="puzzle_input_cell" type="text" size="1" name="'.$i.'" id="'.$i.'" ';
                     if($v != 0)
                     {
-                        echo '" value="';
-                        echo $v;
+                        echo 'value="'.$v.'"';
                     }
-                    echo '"/>';
+                    echo '/>';
                     echo '</td>';
                 }
                 echo '</tr>';
@@ -174,20 +172,20 @@ function displayPuzzleForm($puzzle)
         echo '</tr>';
     }
     echo '</table>';
-    echo '<button class="button" type="submit">Solve</button>';
+    echo '<button class="button" onclick="solvePuzzleForm(); return false;">Solve</button>';
     echo '<button class="button" onclick="clearInputs(); return false;">Clear</button>';
-    echo '</form>';
+    //echo '</form>';
 }
 function displayPuzzleChooser($random, $puzzle_index)
 {
     echo '<form class="puzzle_chooser" action="index.php" method="get">';
     
     echo 'Pick a random puzzle: ';
-    echo '<input type="radio" id="random_on"  name="random" value="Yes" onclick="random_changed();"';
+    echo '<input type="radio" id="random_on"  name="random" value="Yes" onclick="randomChanged();"';
     if ($random==='Yes') echo 'checked';
     echo '>Yes</input>';
     echo '&nbsp;';
-    echo '<input id="random_off" type="radio" name="random" value="No" onclick="random_changed();"';
+    echo '<input id="random_off" type="radio" name="random" value="No" onclick="randomChanged();"';
     if ($random==='No') echo 'checked';
     echo '>No</input>';
     

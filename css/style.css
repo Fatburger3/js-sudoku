@@ -1,0 +1,73 @@
+html, body {
+    text-align: center;
+    background-color: black;
+    color: yellow;
+}
+h2 {
+    text-align: center;
+}
+.puzzle{
+    border: outset 5px salmon;
+}
+.puzzle_block{
+    border: inset 5px steelblue;
+}
+.puzzle_input_cell, .puzzle_cell{
+    border: solid 1px gray;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin:0;
+    background-color: gray;
+    color: black;
+}
+.spacer {
+    display: inline-block;
+    width: 10%;
+}
+.button {
+    font: bold 12px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border: solid 1px steelblue;
+    background-color: purple;
+    color: white;
+    margin: 5px;
+}
+.button:hover {
+    border: solid 1px green;
+    background-color: purple;
+    color: white;
+    margin: 5px;
+    transition-duration: .5s;
+}
+.button:selected {
+    border: solid 1px green;
+    background-color: red;
+    color: white;
+    margin: 5px;
+    transition-duration: .5s;
+}
+#submitted, #solved {
+    text-align: center;
+    display: inline-block;
+    width: 35%;
+}
+#main {
+    height: 100%;
+}
+#checkmark{
+    display: inline-block;
+    width: 64px;
+}
+#submitted{
+}
+#solved {
+}
+#select_puzzle {
+    display: none;
+}
+.puzzle, .puzzle_form{
+}
