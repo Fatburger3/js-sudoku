@@ -1,11 +1,11 @@
 html, body {
     text-align: center;
     background-color: black;
-    color: yellow;
 }
-h2 {
-    text-align: center;
+h1 {
+    color: white;
 }
+
 .puzzle{
     border: outset 5px salmon;
 }
@@ -25,31 +25,6 @@ h2 {
     display: inline-block;
     width: 10%;
 }
-.button {
-    font: bold 12px Arial;
-    text-decoration: none;
-    background-color: #EEEEEE;
-    color: #333333;
-    padding: 2px 6px 2px 6px;
-    border: solid 1px steelblue;
-    background-color: purple;
-    color: white;
-    margin: 5px;
-}
-.button:hover {
-    border: solid 1px green;
-    background-color: purple;
-    color: white;
-    margin: 5px;
-    transition-duration: .5s;
-}
-.button:selected {
-    border: solid 1px green;
-    background-color: red;
-    color: white;
-    margin: 5px;
-    transition-duration: .5s;
-}
 #submitted, #solved {
     text-align: center;
     display: inline-block;
@@ -62,12 +37,6 @@ h2 {
     display: inline-block;
     width: 64px;
 }
-#submitted{
-}
-#solved {
-}
 #select_puzzle {
     display: none;
-}
-.puzzle, .puzzle_form{
 }
